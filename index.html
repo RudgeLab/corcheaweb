@@ -1,9 +1,11 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="static/bootswatch/bootstrap.min.css">
+  <link rel="stylesheet" href="static /css/index.css">
   <title>Corchea</title>
 </head>
 <body>
@@ -13,12 +15,12 @@
   </nav>
 
   <!-- Title -->
-  <div class="container">
-    <div class="jumbotron">
-      <center><h1>Corchea</h1></center>
-      <img src="static/img/corchea_logo.png" alt="">
-      <p>Paper-fluidic open science hardware for research, teaching and more</p>
-    </div>
+  <div class="jumbotron" style="margin: 0px; padding:0px;">
+    <center><h1>Corchea</h1></center>
+    <img src="static/img/corchea_logo.png" style="width:150px;height:150px;" class="center">
+    <br>
+    <center><p>Paper-fluidic open science hardware for research, teaching and more</p></center>
+    <br>
   </div>
 
   <!-- Content -->
@@ -53,43 +55,54 @@
       <!-- Intro -->
       <div class="tab-pane fade show active" id="intro">
         <p>Welcome to the Corchea website! The name of this project comes from the musical note quaver or eighth note, in spanish corchea. The first version of the device on 2017 used two petri dishes connected with a U shaped strip of paper look very similar to corchea, more specificaly to the unicode symbol U+266B for corchea. A musician friend makes me note that in fact that shape is a double corchea, but is too long and I have too many files with this name so it will remains as Corchea.</p>
-        <img src="static/img/corchea_note1.png" alt="">
-        <img src="static/img/corchea_note2.png" alt="">
+        <div class="col-md-6" style="float:left;">
+          <img src="static/img/corchea_note1.png" style="width:325px;height:370px;">
+        </div>
+        <div class="col-md-6" style="float:left;">
+        <img src="static/img/corchea_note2.png" style="width:325px;height:350px;">
+        </div>
       </div>
       <!-- Preview -->
       <div class="tab-pane fade" id="preview">
+        <br>
         <h3>Corchea's design v3</h3>
-        <img src="static/img/corchea_design.png" alt="">
+        <img src="static/img/corchea_design.png" style="width:600px;height:400px;" class="center">
+        <br>
         <h3>In the lab</h3>
-        <img src="static/img/corchea_lab.jpg" alt="">
+        <img src="static/img/corchea_lab.jpg" style="width:600px;height:400px;" class="center">
+        <br>
         <h3>Results</h3>
-        <img src="static/img/corchea_results.gif" alt="">
+        <img src="static/img/corchea_results.gif" style="width:600px;height:400px;" class="center">
       </div>
       <!-- Research -->
       <div class="tab-pane fade" id="research">
         <h3>Poster</h3>
-        <img src="static/img/research_gate.png" alt="">
+        <a href="https://www.researchgate.net/publication/334523532_Open-Source_Paper-Fluidic_Device_for_Bacterial_Culture_Communication_and_Biocomputing">
+          <img src="static/img/research_gate.png" style="width:200px;height:200px;" class="center">
+        </a>
         <h3>Protocol</h3>
-        <img src="static/img/protocols.png" alt="">
-      </div>
+        <a href="https://www.protocols.io/view/corchea-paper-based-microfluidic-device-vtwe6pe">  
+          <img src="static/img/protocols.png" style="width:200px;height:200px;" class="center">
+        </a>
+        </div>
       <!-- Description -->
       <div class="tab-pane fade" id="description">
         <p>Corchea use paper capilarity to move fluids across the paper, like candles or plants. There are two regimes, 
           <a class="navbar-brand" href="https://en.wikipedia.org/wiki/Capillary_action">capilarity</a> when paper is dry 
           and wet-flow when paper is fully wet by the <a class="navbar-brand" href="https://en.wikipedia.org/wiki/Darcy%27s_law">Darcy Law</a>.
         </p>
-        <img src="static/img/desc1.png" alt="">
+        <img src="static/img/desc1.png" style="width:600px;height:400px;" class="center">
         <p>In Corchea one end of the paper is submerged in liquid (dye, media), the rest of the paper is covered with 
           acrylic to avoid evaporation except for the opposite end. This create a pressure difference that makes liquid 
           flow towards the evaporating end.
         </p>
-        <img src="static/img/desc2.png" alt="">
+        <img src="static/img/desc2.png" style="width:600px;height:400px;" class="center">
         <p>
           In our design both ends of the paper are at the same side making it easy to plug into a transilluminator or 
           imaging station like <a class="navbar-brand" href="https://github.com/SynBioUC/FluoPi">FluoPi</a>, 
           to transport and to use.
         </p>
-        <img src="static/img/desc3.png" alt="">
+        <img src="static/img/desc3.png" style="width:600px;height:400px;" class="center">
       </div>
       <!-- Education -->
       <div class="tab-pane fade" id="education">
