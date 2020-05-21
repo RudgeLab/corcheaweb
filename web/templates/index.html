@@ -1,0 +1,162 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{% static 'bootswatch/bootstrap.min.css' %}">
+  <title>Corchea</title>
+</head>
+<body>
+  <!-- Header -->
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+    <a class="navbar-brand" href="#">Corchea</a>
+  </nav>
+
+  <!-- Title -->
+  <div class="container">
+    <div class="jumbotron">
+      <center><h1>Corchea</h1></center>
+      <img src="{% static 'img/corchea_logo.png' %}" alt="">
+      <p>Paper-fluidic open science hardware for research, teaching and more</p>
+    </div>
+  </div>
+
+  <!-- Content -->
+  <!-- Tabs -->
+  <div class="container">
+    <ul class="nav nav-tabs">
+      <li class="nav-item">
+        <a class="nav-link active" data-toggle="tab" href="#intro">Introduction</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" data-toggle="tab" href="#preview">Preview</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" data-toggle="tab" href="#research">Research</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" data-toggle="tab" href="#description">Description</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" data-toggle="tab" href="#education">Education</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" data-toggle="tab" href="#biosensing">Biosensing</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" data-toggle="tab" href="#work">Let's work together!</a>
+      </li>
+    </ul>
+
+    <!-- Actual content -->
+    <div id="myTabContent" class="tab-content">
+      <!-- Intro -->
+      <div class="tab-pane fade show active" id="intro">
+        <p>Welcome to the Corchea website! The name of this project comes from the musical note quaver or eighth note, in spanish corchea. The first version of the device on 2017 used two petri dishes connected with a U shaped strip of paper look very similar to corchea, more specificaly to the unicode symbol U+266B for corchea. A musician friend makes me note that in fact that shape is a double corchea, but is too long and I have too many files with this name so it will remains as Corchea.</p>
+        <img src="{% static 'img/corchea_note1.png' %}" alt="">
+        <img src="{% static 'img/corchea_note2.png' %}" alt="">
+      </div>
+      <!-- Preview -->
+      <div class="tab-pane fade" id="preview">
+        <h3>Corchea's design v3</h3>
+        <img src="{% static 'img/corchea_design.png' %}" alt="">
+        <h3>In the lab</h3>
+        <img src="{% static 'img/corchea_lab.jpg' %}" alt="">
+        <h3>Results</h3>
+        <img src="{% static 'img/corchea_results.gif' %}" alt="">
+      </div>
+      <!-- Research -->
+      <div class="tab-pane fade" id="research">
+        <h3>Poster</h3>
+        <img src="{% static 'img/research_gate.png' %}" alt="">
+        <h3>Protocol</h3>
+        <img src="{% static 'img/protocols.png' %}" alt="">
+      </div>
+      <!-- Description -->
+      <div class="tab-pane fade" id="description">
+        <p>Corchea use paper capilarity to move fluids across the paper, like candles or plants. There are two regimes, 
+          <a class="navbar-brand" href="https://en.wikipedia.org/wiki/Capillary_action">capilarity</a> when paper is dry 
+          and wet-flow when paper is fully wet by the <a class="navbar-brand" href="https://en.wikipedia.org/wiki/Darcy%27s_law">Darcy Law</a>.
+        </p>
+        <img src="{% static 'img/desc1.png' %}" alt="">
+        <p>In Corchea one end of the paper is submerged in liquid (dye, media), the rest of the paper is covered with 
+          acrylic to avoid evaporation except for the opposite end. This create a pressure difference that makes liquid 
+          flow towards the evaporating end.
+        </p>
+        <img src="{% static 'img/desc2.png' %}" alt="">
+        <p>
+          In our design both ends of the paper are at the same side making it easy to plug into a transilluminator or 
+          imaging station like <a class="navbar-brand" href="https://github.com/SynBioUC/FluoPi">FluoPi</a>, 
+          to transport and to use.
+        </p>
+        <img src="{% static 'img/desc3.png' %}" alt="">
+      </div>
+      <!-- Education -->
+      <div class="tab-pane fade" id="education">
+        <p>Education content</p>
+      </div>
+      <!-- Biosensing -->
+      <div class="tab-pane fade" id="biosensing">
+        <p>
+          Corchea works as a hardware platform to pass a sample through a biosensor. It can sample continuously and 
+          detect changes on the environment. You can analyze the response or output usig Corchea_DiscAnalyze_Pulse
+        </p>
+      </div>
+      <!-- Work together -->
+      <div class="tab-pane fade" id="work">
+        <p>
+          Here is a list of possible tasks you can help with. Remember that you can help in things that are not 
+          in this list, just contact us and tell us how you want to cooperate or what do you want to do.
+        </p>
+        <h5>Hardware</h5>
+        <ul>
+          <li>Designing/optimizing the paper-fluidic setup</li>
+          <li>Customizing the design to your needs</li>
+          <li>Testing the setup</li>
+        </ul>
+        <h5>Software</h5>
+        <ul>
+          <li>Creating/optimizing analysis code</li>
+          <li>Recognition and segmentation of objects</li>
+          <li>Deep learning CNN, LSTM, RNN</li>
+          <li>Tensorflow implementations</li>
+        </ul>
+        <h5>Biology</h5>
+        <ul>
+          <li>Microbiology</li>
+          <li>Environmental microbiology</li>
+          <li>Creating/testing biosensors</li>
+          <li>Creating/modifying/testing genetic constructions</li>
+          <li>Implementing new reporters (fluorescent, colorimetric, enzimatic, etc)</li>
+          <li>Biomaterials</li>
+        </ul>
+        <h5>Content</h5>
+        <ul>
+          <li>Creating new educational content using Corchea</li>
+          <li>Creating new experiments using Corchea</li>
+          <li></li>
+        </ul>
+        <h5>Using the device and give us feedback, we will apreciate it!</h5>
+        <br>
+        <br>
+        <h5>Why should we work together?</h5>
+        <p>
+          If you like to learn doing projects, you are a maker or you just want to contribute this is a fun open-source 
+          interdisciplinary project to be part of. It uses, 3D printing, laser cut, paper-based microfluics, microbiology, 
+          synthetic biology, data science. Did I mention that is also low-cost so it is not expensive to replicate, and 
+          you can do it in the comfort of your home or lab (with apropiate sterility protocols if necessary). So yeah, 
+          what are you waiting for? an invitational letter? (This message count as invitational letter)
+          Also is highly probable that the results will be published in an Open Acces peer-reviewed scientific journal 
+          or at least a BioRxiv preprint and you can be a co-author!
+        </p>
+      </div>
+    </div>
+  </div>
+
+
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+</html>
